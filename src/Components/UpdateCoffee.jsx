@@ -15,7 +15,7 @@ const UpdateCoffee = () => {
     const photo = e.target.photo.value;
     const newCoffee = { name, supplier, category, chef, taste, details, photo };
     console.log(newCoffee);
-    fetch("https://coffee-store-server-omega-orcin.vercel.app/coffees", {
+    fetch("https://coffee-store-server-one-topaz.vercel.app/coffees", {
       method: "POST",
       headers: {
         "content-type": "application/json",

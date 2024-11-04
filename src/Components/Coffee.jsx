@@ -20,7 +20,7 @@ const Coffee = ({ coffee, setCurrentCoffees, currentCoffees }) => {
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(
-          `https://coffee-store-server-omega-orcin.vercel.app/coffees/${_id}`,
+          `https://coffee-store-server-one-topaz.vercel.app/coffees/${_id}`,
           {
             method: "DELETE",
           }

@@ -25,7 +25,7 @@ const UpdateExistingCoffee = () => {
     };
     console.log(UpdatedExistingCoffee);
     fetch(
-      `https://coffee-store-server-omega-orcin.vercel.app/updateExistingCoffee/${existingCoffee._id}`,
+      `https://coffee-store-server-one-topaz.vercel.app/updateExistingCoffee/${existingCoffee._id}`,
       {
         method: "PUT",
         headers: {
