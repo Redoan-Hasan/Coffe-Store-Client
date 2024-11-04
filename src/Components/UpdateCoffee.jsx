@@ -15,16 +15,13 @@ const UpdateCoffee = () => {
     const photo = e.target.photo.value;
     const newCoffee = { name, supplier, category, chef, taste, details, photo };
     console.log(newCoffee);
-    fetch(
-      "https://coffee-store-server-hazel-one.vercel.app/coffees",
-      {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(newCoffee),
-      }
-    )
+    fetch("https://coffee-store-server-omega-orcin.vercel.app/coffees", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newCoffee),
+    })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

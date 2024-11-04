@@ -15,8 +15,9 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("https://coffee-store-server-hazel-one.vercel.app/coffees")
-      },        
+        loader: () =>
+          fetch("https://coffee-store-server-omega-orcin.vercel.app/coffees"),
+      },
       {
         path: "/updateCoffee",
         element: <UpdateCoffee />,
@@ -24,7 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/updateExistingCoffee/:id",
         element: <UpdateExistingCoffee />,
-        loader:({ params }) =>fetch(`https://coffee-store-server-hazel-one.vercel.app/updateExistingCoffee/${params.id}`)
+        loader: ({ params }) =>
+          fetch(
+            `https://coffee-store-server-omega-orcin.vercel.app/updateExistingCoffee/${params.id}`
+          ),
       },
     ],
   },
