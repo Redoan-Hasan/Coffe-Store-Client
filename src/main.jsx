@@ -15,18 +15,19 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: async () => {
-            try {
-                const response = await fetch("https://coffee-store-server-one-topaz.vercel.app/coffees");
-                if (!response.ok) {
-                    throw new Error('Network response was not ok'); // Throw an error if the response is not okay
-                }
-                return response.json(); // Return the fetched JSON data
-            } catch (error) {
-                console.error('Error fetching coffees:', error); // Log the error for debugging
-                throw new Response('Error fetching data', { status: 500 }); // Return an error response for the router
-            }
-        },
+        // loader: async () => {
+        //     try {
+        //         const response = await fetch("https://coffee-store-server-one-topaz.vercel.app/coffees");
+        //         if (!response.ok) {
+        //             throw new Error('Network response was not ok'); // Throw an error if the response is not okay
+        //         }
+        //         return response.json(); // Return the fetched JSON data
+        //     } catch (error) {
+        //         console.error('Error fetching coffees:', error); // Log the error for debugging
+        //         throw new Response('Error fetching data', { status: 500 }); // Return an error response for the router
+        //     }
+        // },
+        loader: ()=>fetch('https://coffee-store-server-one-topaz.vercel.app/coffees')
     },
     
       {
